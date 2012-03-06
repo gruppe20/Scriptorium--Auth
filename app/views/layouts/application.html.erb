@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Auth</title>
-  <%= stylesheet_link_tag    "application" %>
+  <title>Communityguides</title>
+  <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tag %>
 </head>
+
 <body>
+    <header id="page_header"> 
+        <nav id="nav_user">
+            <ul>
+                <% if user_signed_in? %> 
+                    <li><span id="currentuser"><%= current_user.email %></span></li>
+                    &nbsp;
+                    <li><%= link_to "My Profile", edit_user_registration_path %></li>
+                    <li><%= link_to "Sign out", destroy_user_session_path, :method=> :delete %></li>
+                <% end %>
+            </ul>
+        </nav>    
+    
+        <div id="page_title">
+            <h1>Scriptorium</h1>
 
-<%= yield %>
+        </div>
+    </header>
 
+    <section id="flash">
+        <% flash.each do |key, value| %>
+            <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+    </section>  
+
+    <%= yield %> 
+    <div><%= link_to "Back", :back %></div>
 </body>
 </html>

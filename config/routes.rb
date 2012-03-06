@@ -1,4 +1,19 @@
 Auth::Application.routes.draw do
+  resources :logins
+
+  devise_for :users
+
+  root :to => 'logins#index'
+  #root :to => redirect("/users/sign_in")
+  #root :to => "users#sign_in"
+
+  #root :to => "devise/sessions#new"
+  #devise_scope :user do 
+  #  root :to => "devise/sessions#new"
+  #end
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
