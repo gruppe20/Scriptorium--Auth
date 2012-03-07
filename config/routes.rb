@@ -1,9 +1,9 @@
 Auth::Application.routes.draw do
-  resources :logins
+  get "home/index"
 
   devise_for :users
 
-  root :to => 'logins#index'
+  root :to => 'home#index'
   #root :to => redirect("/users/sign_in")
   #root :to => "users#sign_in"
 
@@ -34,7 +34,7 @@ Auth::Application.routes.draw do
   #       get 'short'
   #       post 'toggle'
   #     end
-  #
+  # 
   #     collection do
   #       get 'sold'
   #     end
