@@ -7,6 +7,10 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
+gem "omniauth-openid"
+
+#Mongrel is needed to fix a problem with WEBrick
+gem 'mongrel', '1.2.0.pre2', :group => :development
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or

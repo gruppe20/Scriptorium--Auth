@@ -7,7 +7,7 @@ require "auth/version"
 Gem::Specification.new do |s|
   s.name        = "auth"
   s.version     = Auth::VERSION
-  s.authors     = ["TODO: Your name"]
+  s.authors     = ["Ole Grinnby"]
   s.email       = ["TODO: Your email"]
   s.homepage    = "TODO"
   s.summary     = "TODO: Summary of Auth."
