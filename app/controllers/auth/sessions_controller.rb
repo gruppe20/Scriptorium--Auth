@@ -6,7 +6,10 @@ module Auth
     def create
       #raise request.env["omniauth.auth"].to_yaml
       auth = request.env["omniauth.auth"]
-      raise auth.to_yaml
+      #raise auth.to_yaml
+      email = auth["info"]["email"]
+      name  = auth["info"]["name"]
+      redirect_to "#{session[:caller]}?email=#{email}&name=#{name}&redirect=#{session[:redirect]}"
     end
 
   end

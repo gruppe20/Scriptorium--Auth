@@ -10214,3 +10214,1003 @@ extra:
   Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
   Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /auth/application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /auth/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /auth/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /auth/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /auth/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+Served asset /auth/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 11:54:53 +0200
+
+
+Started GET "/auth/open_id/callback?_method=post&openid.assoc_handle=%7BHMAC-SHA1%7D%7B4faccc7f%7D%7BOdfRsw%3D%3D%7D&openid.ax.mode=fetch_response&openid.claimed_id=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.identity=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.mode=id_res&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.op_endpoint=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fserver&openid.response_nonce=2012-05-11T09%3A54%3A41ZcfCEpX&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fopen_id%2Fcallback%3F_method%3Dpost&openid.sig=T5arBfl0LMhMLVnJLjgPYHCVaNM%3D&openid.signed=assoc_handle%2Cax.mode%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cns.ax%2Cns.sreg%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Csreg.email%2Csreg.fullname&openid.sreg.email=s163480%40hioa.no&openid.sreg.fullname=Ole+Grinnby" for 127.0.0.1 at 2012-05-11 11:54:54 +0200
+Processing by Auth::SessionsController#create as HTML
+Completed 500 Internal Server Error in 3ms
+
+RuntimeError (---
+provider: :open_id
+uid: http://pc29-75.iu.hio.no/openid/s163480
+info:
+  email: s163480@hioa.no
+  name: Ole Grinnby
+credentials: {}
+extra:
+  response: !ruby/object:OpenID::Consumer::SuccessResponse
+    endpoint: !ruby/object:OpenID::OpenIDServiceEndpoint
+      claimed_id: http://pc29-75.iu.hio.no/openid/s163480
+      server_url: http://pc29-75.iu.hio.no/openid/server
+      type_uris:
+      - http://specs.openid.net/auth/2.0/signon
+      - http://openid.net/extensions/sreg/1.1
+      - http://openid.net/sreg/1.0
+      - http://openid.net/srv/ax/1.0
+      local_id: http://pc29-75.iu.hio.no/openid/s163480
+      canonical_id: !!null 
+      used_yadis: true
+      display_identifier: !!null 
+    identity_url: http://pc29-75.iu.hio.no/openid/s163480
+    message: !ruby/object:OpenID::Message
+      args:
+        ? - :bare_namespace
+          - _method
+        : post
+        ? - http://specs.openid.net/auth/2.0
+          - assoc_handle
+        : ! '{HMAC-SHA1}{4faccc7f}{OdfRsw==}'
+        ? - http://openid.net/srv/ax/1.0
+          - mode
+        : fetch_response
+        ? - http://specs.openid.net/auth/2.0
+          - claimed_id
+        : http://pc29-75.iu.hio.no/openid/s163480
+        ? - http://specs.openid.net/auth/2.0
+          - identity
+        : http://pc29-75.iu.hio.no/openid/s163480
+        ? - http://specs.openid.net/auth/2.0
+          - mode
+        : id_res
+        ? - http://specs.openid.net/auth/2.0
+          - op_endpoint
+        : http://pc29-75.iu.hio.no/openid/server
+        ? - http://specs.openid.net/auth/2.0
+          - response_nonce
+        : '2012-05-11T09:54:41ZcfCEpX'
+        ? - http://specs.openid.net/auth/2.0
+          - return_to
+        : http://localhost:3000/auth/open_id/callback?_method=post
+        ? - http://specs.openid.net/auth/2.0
+          - sig
+        : T5arBfl0LMhMLVnJLjgPYHCVaNM=
+        ? - http://specs.openid.net/auth/2.0
+          - signed
+        : assoc_handle,ax.mode,claimed_id,identity,mode,ns,ns.ax,ns.sreg,op_endpoint,response_nonce,return_to,signed,sreg.email,sreg.fullname
+        ? - http://openid.net/extensions/sreg/1.1
+          - email
+        : s163480@hioa.no
+        ? - http://openid.net/extensions/sreg/1.1
+          - fullname
+        : Ole Grinnby
+      namespaces: !ruby/object:OpenID::NamespaceMap
+        alias_to_namespace:
+          :null_namespace: http://specs.openid.net/auth/2.0
+          ax: http://openid.net/srv/ax/1.0
+          sreg: http://openid.net/extensions/sreg/1.1
+        namespace_to_alias:
+          http://specs.openid.net/auth/2.0: :null_namespace
+          http://openid.net/srv/ax/1.0: ax
+          http://openid.net/extensions/sreg/1.1: sreg
+        implicit_namespaces: []
+      openid_ns_uri: http://specs.openid.net/auth/2.0
+    signed_fields:
+    - openid.assoc_handle
+    - openid.ax.mode
+    - openid.claimed_id
+    - openid.identity
+    - openid.mode
+    - openid.ns
+    - openid.ns.ax
+    - openid.ns.sreg
+    - openid.op_endpoint
+    - openid.response_nonce
+    - openid.return_to
+    - openid.signed
+    - openid.sreg.email
+    - openid.sreg.fullname
+):
+  /home/ole/Hovedprosjekt/Prosjekt/auth/app/controllers/auth/sessions_controller.rb:9:in `create'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:403:in `_run__3569647028108662242__process_action__2437711021113687380__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:392:in `call_app!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:354:in `callback_phase'
+  omniauth-openid (1.0.1) lib/omniauth/strategies/open_id.rb:81:in `callback_phase'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__3671152864596536693__call__1065639717834231479__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 12:08:24 +0200
+
+
+Started GET "/auth/open_id/callback?_method=post&openid.assoc_handle=%7BHMAC-SHA1%7D%7B4faccc7f%7D%7BOdfRsw%3D%3D%7D&openid.ax.mode=fetch_response&openid.claimed_id=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.identity=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.mode=id_res&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.op_endpoint=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fserver&openid.response_nonce=2012-05-11T10%3A08%3A17ZkLQ8nf&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fopen_id%2Fcallback%3F_method%3Dpost&openid.sig=StIbsDHUE1x5nLf%2Bs%2BgWIpFs0AM%3D&openid.signed=assoc_handle%2Cax.mode%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cns.ax%2Cns.sreg%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Csreg.email%2Csreg.fullname&openid.sreg.email=s163480%40hioa.no&openid.sreg.fullname=Ole+Grinnby" for 127.0.0.1 at 2012-05-11 12:08:30 +0200
+Processing by Auth::SessionsController#create as HTML
+Completed 500 Internal Server Error in 3ms
+
+RuntimeError (---
+provider: :open_id
+uid: http://pc29-75.iu.hio.no/openid/s163480
+info:
+  email: s163480@hioa.no
+  name: Ole Grinnby
+credentials: {}
+extra:
+  response: !ruby/object:OpenID::Consumer::SuccessResponse
+    endpoint: !ruby/object:OpenID::OpenIDServiceEndpoint
+      claimed_id: http://pc29-75.iu.hio.no/openid/s163480
+      server_url: http://pc29-75.iu.hio.no/openid/server
+      type_uris:
+      - http://specs.openid.net/auth/2.0/signon
+      - http://openid.net/extensions/sreg/1.1
+      - http://openid.net/sreg/1.0
+      - http://openid.net/srv/ax/1.0
+      local_id: http://pc29-75.iu.hio.no/openid/s163480
+      canonical_id: !!null 
+      used_yadis: true
+      display_identifier: !!null 
+    identity_url: http://pc29-75.iu.hio.no/openid/s163480
+    message: !ruby/object:OpenID::Message
+      args:
+        ? - :bare_namespace
+          - _method
+        : post
+        ? - http://specs.openid.net/auth/2.0
+          - assoc_handle
+        : ! '{HMAC-SHA1}{4faccc7f}{OdfRsw==}'
+        ? - http://openid.net/srv/ax/1.0
+          - mode
+        : fetch_response
+        ? - http://specs.openid.net/auth/2.0
+          - claimed_id
+        : http://pc29-75.iu.hio.no/openid/s163480
+        ? - http://specs.openid.net/auth/2.0
+          - identity
+        : http://pc29-75.iu.hio.no/openid/s163480
+        ? - http://specs.openid.net/auth/2.0
+          - mode
+        : id_res
+        ? - http://specs.openid.net/auth/2.0
+          - op_endpoint
+        : http://pc29-75.iu.hio.no/openid/server
+        ? - http://specs.openid.net/auth/2.0
+          - response_nonce
+        : '2012-05-11T10:08:17ZkLQ8nf'
+        ? - http://specs.openid.net/auth/2.0
+          - return_to
+        : http://localhost:3000/auth/open_id/callback?_method=post
+        ? - http://specs.openid.net/auth/2.0
+          - sig
+        : StIbsDHUE1x5nLf+s+gWIpFs0AM=
+        ? - http://specs.openid.net/auth/2.0
+          - signed
+        : assoc_handle,ax.mode,claimed_id,identity,mode,ns,ns.ax,ns.sreg,op_endpoint,response_nonce,return_to,signed,sreg.email,sreg.fullname
+        ? - http://openid.net/extensions/sreg/1.1
+          - email
+        : s163480@hioa.no
+        ? - http://openid.net/extensions/sreg/1.1
+          - fullname
+        : Ole Grinnby
+      namespaces: !ruby/object:OpenID::NamespaceMap
+        alias_to_namespace:
+          :null_namespace: http://specs.openid.net/auth/2.0
+          ax: http://openid.net/srv/ax/1.0
+          sreg: http://openid.net/extensions/sreg/1.1
+        namespace_to_alias:
+          http://specs.openid.net/auth/2.0: :null_namespace
+          http://openid.net/srv/ax/1.0: ax
+          http://openid.net/extensions/sreg/1.1: sreg
+        implicit_namespaces: []
+      openid_ns_uri: http://specs.openid.net/auth/2.0
+    signed_fields:
+    - openid.assoc_handle
+    - openid.ax.mode
+    - openid.claimed_id
+    - openid.identity
+    - openid.mode
+    - openid.ns
+    - openid.ns.ax
+    - openid.ns.sreg
+    - openid.op_endpoint
+    - openid.response_nonce
+    - openid.return_to
+    - openid.signed
+    - openid.sreg.email
+    - openid.sreg.fullname
+):
+  /home/ole/Hovedprosjekt/Prosjekt/auth/app/controllers/auth/sessions_controller.rb:9:in `create'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:403:in `_run__3569647028108662242__process_action__2437711021113687380__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:392:in `call_app!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:354:in `callback_phase'
+  omniauth-openid (1.0.1) lib/omniauth/strategies/open_id.rb:81:in `callback_phase'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__3671152864596536693__call__1065639717834231479__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 12:10:29 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /auth/application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /auth/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /auth/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /auth/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /auth/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 12:28:40 +0200
+Served asset /auth/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 12:28:41 +0200
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 12:28:48 +0200
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 12:28:52 +0200
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 12:28:56 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /auth/application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /auth/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /auth/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /auth/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /auth/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 12:29:02 +0200
+Served asset /auth/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 14:50:13 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (9.7ms)
+Completed 200 OK in 116ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.1ms)
+Completed 200 OK in 9ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /auth/application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /auth/home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /auth/sessions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /auth/home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /auth/application.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 14:50:15 +0200
+Served asset /auth/sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 14:50:23 +0200
+
+
+Started GET "/auth/open_id/callback?_method=post&openid.assoc_handle=%7BHMAC-SHA1%7D%7B4faccc7f%7D%7BOdfRsw%3D%3D%7D&openid.ax.mode=fetch_response&openid.claimed_id=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.identity=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.mode=id_res&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.op_endpoint=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fserver&openid.response_nonce=2012-05-11T12%3A50%3A17Zv3vLFY&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fopen_id%2Fcallback%3F_method%3Dpost&openid.sig=HDUTe1PCbeMpJPF7hMQo4NpFA7g%3D&openid.signed=assoc_handle%2Cax.mode%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cns.ax%2Cns.sreg%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Csreg.email%2Csreg.fullname&openid.sreg.email=s163480%40hioa.no&openid.sreg.fullname=Ole+Grinnby" for 127.0.0.1 at 2012-05-11 14:50:30 +0200
+Processing by Auth::SessionsController#create as HTML
+Completed 500 Internal Server Error in 3ms
+
+RuntimeError (---
+provider: :open_id
+uid: http://pc29-75.iu.hio.no/openid/s163480
+info:
+  email: s163480@hioa.no
+  name: Ole Grinnby
+credentials: {}
+extra:
+  response: !ruby/object:OpenID::Consumer::SuccessResponse
+    endpoint: !ruby/object:OpenID::OpenIDServiceEndpoint
+      claimed_id: http://pc29-75.iu.hio.no/openid/s163480
+      server_url: http://pc29-75.iu.hio.no/openid/server
+      type_uris:
+      - http://specs.openid.net/auth/2.0/signon
+      - http://openid.net/extensions/sreg/1.1
+      - http://openid.net/sreg/1.0
+      - http://openid.net/srv/ax/1.0
+      local_id: http://pc29-75.iu.hio.no/openid/s163480
+      canonical_id: !!null 
+      used_yadis: true
+      display_identifier: !!null 
+    identity_url: http://pc29-75.iu.hio.no/openid/s163480
+    message: !ruby/object:OpenID::Message
+      args:
+        ? - :bare_namespace
+          - _method
+        : post
+        ? - http://specs.openid.net/auth/2.0
+          - assoc_handle
+        : ! '{HMAC-SHA1}{4faccc7f}{OdfRsw==}'
+        ? - http://openid.net/srv/ax/1.0
+          - mode
+        : fetch_response
+        ? - http://specs.openid.net/auth/2.0
+          - claimed_id
+        : http://pc29-75.iu.hio.no/openid/s163480
+        ? - http://specs.openid.net/auth/2.0
+          - identity
+        : http://pc29-75.iu.hio.no/openid/s163480
+        ? - http://specs.openid.net/auth/2.0
+          - mode
+        : id_res
+        ? - http://specs.openid.net/auth/2.0
+          - op_endpoint
+        : http://pc29-75.iu.hio.no/openid/server
+        ? - http://specs.openid.net/auth/2.0
+          - response_nonce
+        : '2012-05-11T12:50:17Zv3vLFY'
+        ? - http://specs.openid.net/auth/2.0
+          - return_to
+        : http://localhost:3000/auth/open_id/callback?_method=post
+        ? - http://specs.openid.net/auth/2.0
+          - sig
+        : HDUTe1PCbeMpJPF7hMQo4NpFA7g=
+        ? - http://specs.openid.net/auth/2.0
+          - signed
+        : assoc_handle,ax.mode,claimed_id,identity,mode,ns,ns.ax,ns.sreg,op_endpoint,response_nonce,return_to,signed,sreg.email,sreg.fullname
+        ? - http://openid.net/extensions/sreg/1.1
+          - email
+        : s163480@hioa.no
+        ? - http://openid.net/extensions/sreg/1.1
+          - fullname
+        : Ole Grinnby
+      namespaces: !ruby/object:OpenID::NamespaceMap
+        alias_to_namespace:
+          :null_namespace: http://specs.openid.net/auth/2.0
+          ax: http://openid.net/srv/ax/1.0
+          sreg: http://openid.net/extensions/sreg/1.1
+        namespace_to_alias:
+          http://specs.openid.net/auth/2.0: :null_namespace
+          http://openid.net/srv/ax/1.0: ax
+          http://openid.net/extensions/sreg/1.1: sreg
+        implicit_namespaces: []
+      openid_ns_uri: http://specs.openid.net/auth/2.0
+    signed_fields:
+    - openid.assoc_handle
+    - openid.ax.mode
+    - openid.claimed_id
+    - openid.identity
+    - openid.mode
+    - openid.ns
+    - openid.ns.ax
+    - openid.ns.sreg
+    - openid.op_endpoint
+    - openid.response_nonce
+    - openid.return_to
+    - openid.signed
+    - openid.sreg.email
+    - openid.sreg.fullname
+):
+  /home/ole/Hovedprosjekt/Prosjekt/auth/app/controllers/auth/sessions_controller.rb:9:in `create'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:403:in `_run__837585614716523862__process_action__2056055996883298510__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:392:in `call_app!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:354:in `callback_phase'
+  omniauth-openid (1.0.1) lib/omniauth/strategies/open_id.rb:81:in `callback_phase'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1238657774692651263__call__2831526563297654318__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /auth/application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /auth/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /auth/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /auth/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /auth/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:23 +0200
+Served asset /auth/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 14:56:24 +0200
+
+
+Started GET "/auth/open_id/callback?_method=post&openid.assoc_handle=%7BHMAC-SHA1%7D%7B4faccc7f%7D%7BOdfRsw%3D%3D%7D&openid.ax.mode=fetch_response&openid.claimed_id=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.identity=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.mode=id_res&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.op_endpoint=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fserver&openid.response_nonce=2012-05-11T12%3A56%3A17ZIQ04oH&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fopen_id%2Fcallback%3F_method%3Dpost&openid.sig=TTC9VzZ7e6DCq1g7ZTm7hMbzzFE%3D&openid.signed=assoc_handle%2Cax.mode%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cns.ax%2Cns.sreg%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Csreg.email%2Csreg.fullname&openid.sreg.email=s163480%40hioa.no&openid.sreg.fullname=Ole+Grinnby" for 127.0.0.1 at 2012-05-11 14:56:30 +0200
+Processing by Auth::SessionsController#create as HTML
+Completed 500 Internal Server Error in 136ms
+
+NoMethodError (undefined method `[]' for #<ActionDispatch::Routing::RoutesProxy:0x0000000180a790>):
+  actionpack (3.2.3) lib/action_dispatch/routing/routes_proxy.rb:34:in `method_missing'
+  /home/ole/Hovedprosjekt/Prosjekt/auth/app/controllers/auth/sessions_controller.rb:10:in `create'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:403:in `_run__837585614716523862__process_action__2056055996883298510__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:392:in `call_app!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:354:in `callback_phase'
+  omniauth-openid (1.0.1) lib/omniauth/strategies/open_id.rb:81:in `callback_phase'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1238657774692651263__call__2831526563297654318__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.0ms)
+Completed 200 OK in 7ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /auth/application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /auth/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /auth/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /auth/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /auth/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 14:56:54 +0200
+Served asset /auth/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Processing by Auth::HomeController#index as HTML
+  Rendered /home/ole/Hovedprosjekt/Prosjekt/auth/app/views/auth/home/index.html.erb within layouts/auth/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/auth/application.css?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /auth/application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.js?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /auth/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/home.css?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /auth/home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.css?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /auth/sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/sessions.js?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /auth/sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/auth/application.js?body=1" for 127.0.0.1 at 2012-05-11 14:59:05 +0200
+Served asset /auth/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/auth/open_id" for 127.0.0.1 at 2012-05-11 14:59:06 +0200
+
+
+Started GET "/auth/open_id/callback?_method=post&openid.assoc_handle=%7BHMAC-SHA1%7D%7B4faccc7f%7D%7BOdfRsw%3D%3D%7D&openid.ax.mode=fetch_response&openid.claimed_id=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.identity=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.mode=id_res&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.op_endpoint=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fserver&openid.response_nonce=2012-05-11T12%3A58%3A53Z9aU3vz&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fopen_id%2Fcallback%3F_method%3Dpost&openid.sig=gVaXxHCEkEig3YdLe8%2FBbYcM7dM%3D&openid.signed=assoc_handle%2Cax.mode%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cns.ax%2Cns.sreg%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Csreg.email%2Csreg.fullname&openid.sreg.email=s163480%40hioa.no&openid.sreg.fullname=Ole+Grinnby" for 127.0.0.1 at 2012-05-11 14:59:06 +0200
+Processing by Auth::SessionsController#create as HTML
+Redirected to http://localhost:3000/session/create?email=s163480@hioa.no&name=Ole Grinnby
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/open_id/callback?_method=post&openid.assoc_handle=%7BHMAC-SHA1%7D%7B4faccc7f%7D%7BOdfRsw%3D%3D%7D&openid.ax.mode=fetch_response&openid.claimed_id=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.identity=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fs163480&openid.mode=id_res&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.op_endpoint=http%3A%2F%2Fpc29-75.iu.hio.no%2Fopenid%2Fserver&openid.response_nonce=2012-05-11T12%3A58%3A53Z9aU3vz&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fopen_id%2Fcallback%3F_method%3Dpost&openid.sig=gVaXxHCEkEig3YdLe8%2FBbYcM7dM%3D&openid.signed=assoc_handle%2Cax.mode%2Cclaimed_id%2Cidentity%2Cmode%2Cns%2Cns.ax%2Cns.sreg%2Cop_endpoint%2Cresponse_nonce%2Creturn_to%2Csigned%2Csreg.email%2Csreg.fullname&openid.sreg.email=s163480%40hioa.no&openid.sreg.fullname=Ole+Grinnby" for 127.0.0.1 at 2012-05-11 14:59:06 +0200
+
+OmniAuth::Error (invalid_credentials):
+  omniauth (1.1.0) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+  omniauth (1.1.0) lib/omniauth/failure_endpoint.rb:20:in `call'
+  omniauth (1.1.0) lib/omniauth/failure_endpoint.rb:12:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:457:in `fail!'
+  omniauth-openid (1.0.1) lib/omniauth/strategies/open_id.rb:80:in `callback_phase'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:219:in `callback_call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:175:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1238657774692651263__call__2831526563297654318__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/ole/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/ole/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
