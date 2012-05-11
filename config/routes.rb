@@ -3,5 +3,5 @@ Auth::Engine.routes.draw do
 
   root :to => "home#index"
 
-  match "/auth/open_id/callback" => "sessions#create"#, :as => :callback
+  match "auth/open_id/callback" => "sessions#create"#, :as => :callback
 end
