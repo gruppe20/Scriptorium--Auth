@@ -9,6 +9,8 @@ module Auth
       #raise auth.to_yaml
       email = auth["info"]["email"]
       name  = auth["info"]["name"]
+      puts "========================!!!=========================================!!!"
+      puts session[:caller]
       redirect_to "#{session[:caller]}?email=#{email}&name=#{name}&redirect=#{session[:redirect]}"
     end
 

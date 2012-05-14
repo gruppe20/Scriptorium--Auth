@@ -1,7 +1,9 @@
 module Auth
   class HomeController < ApplicationController
     def index
-      session[:caller] = params[:redirect]
+      puts "???=============================================???"
+      puts params[:caller]
+      session[:caller] = params[:caller]
       session[:redirect] = params[:redirect] if params[:redirect]
     end
   end
