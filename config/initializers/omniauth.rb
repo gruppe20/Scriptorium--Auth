@@ -9,5 +9,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
             :store => OpenID::Store::Filesystem.new('/tmp'), 
             :require => 'omniauth-openid', 
             :callback_path => '/login/auth/open_id/callback',
-            :identifier => 'pc29-75.iu.hio.no/openid'
+            :identifier => 'pc29-75.iu.hio.no/openid',
+            :required => ["email", "fullname", "nickname"]
 end
