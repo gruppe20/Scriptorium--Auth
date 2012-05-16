@@ -16,3 +16,10 @@
 /test/dummy/tmp
 
 Gemfile.lock
+
+
+# Ignore folder metadata from macs
+*.DS_Store
+
+#ignore tempfiles from emacs 
+*~
