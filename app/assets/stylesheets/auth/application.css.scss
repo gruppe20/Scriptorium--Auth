@@ -1,0 +1,76 @@
+@font-face {
+	font-family: Archive src('/assets/Archive.otf');
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #ffdaa0; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmRhYTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTVjNTc5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-radial-gradient(center, ellipse cover,  #ffdaa0 0%, #e5c579 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center, center, 0px, center, 100%, color-stop(0%,#ffdaa0), color-stop(100%,#e5c579)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffdaa0 0%,#e5c579 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #ffdaa0 0%,#e5c579 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #ffdaa0 0%,#e5c579 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover,  #ffdaa0 0%,#e5c579 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdaa0', endColorstr='#e5c579',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+	
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	text-align: center;
+}
+
+#login {
+	font-family: "Archive";
+	
+	margin-top: 100px;
+	.box {
+		box-shadow: 1px 1px 4px #777;
+		width: 300px;
+		height: 100px;
+		margin: 0 auto 0 auto;
+		
+		a {
+			font-size: 20px;
+			font-weight: bold;
+			color: #403524;
+			position: relative;
+			top: 40%;
+		}
+	}
+	
+	.box_top {
+
+	}
+	.box_center {
+		
+	}
+	.box_bottom {
+		
+	}
+}
+
+#login_message {
+	background: #403524;
+	padding: 10px 0;
+	max-height: 15px;
+	color: #FFFADB;
+	text-shadow: -1px -1px black;
+}
+
+#openid_link {
+	background: url("openid.png") rgba(255,255,255,0.5) no-repeat;
+	background-position: 0 -50px;
+}
+
+#facebook_link {
+	background: url("facebook.png") rgba(255,255,255,0.5) no-repeat;
+	background-position: -5px -40px;
+}
+
+#twitter_link {
+	background: url("twitter.png") rgba(255,255,255,0.5) no-repeat;
+	background-position: -5px -40px;
+}
